@@ -1,7 +1,8 @@
 Indice documentos de esta carpeta
 CatDisplay_FT857_FT897_Screens(1).pdf
     Pantallas de display del manejo de un ft817
-rotaryEncoder.ino
-    Manejo del encoder (ejemplo de https://www.instructables.com/Improved-Arduino-Rotary-Encoder-Reading/)
 FT817_QO100.rar
         Documentos Varios
+FT817-CAT.PDF
+    Comands cat del FT817
+
