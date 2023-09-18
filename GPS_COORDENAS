@@ -1,0 +1,32 @@
+Obtener coordenadas con TinyGPS
+La secuencia $GPRMC proporciona los siguientes datos:
+  Hora UTC
+  Estado receptor
+  Latitud min Norte
+  Longitud  min Oeste
+  Velocidad en nudos
+  Curso
+  Fecha (DDMMYY)
+  Variación magnética East
+
+Para interpretar la secuencia $GPRMC, disponemos de la librería TinyGPS, que nos permite parsear los datos obtenidos del módulo GPS.
+
+#include <SoftwareSerial.h>
+const int RX = 4;
+const int TX = 3;
+SoftwareSerial gps(RX, TX);
+void setup()
+{
+  Serial.begin(115200);
+  gps.begin(9600);
+}
+
+void loop()
+{
+  if (gps.available())
+  {
+    char data;
+    data = gps.read();
+    Serial.print(data);
+  }
+}
